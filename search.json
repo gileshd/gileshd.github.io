@@ -4,7 +4,7 @@
     "href": "posts/gsoc/index.html",
     "title": "Google Summer of Code",
     "section": "",
-    "text": "It further serves as a record of the work that I undertook.\nIt is still a work in progress…\n\nPRs\n\nLoopy BP in a factor graph\nBelief Propagation on a Gaussian Chain\nKalman info form marginal log likelihood and smoothing\nAdd information form filtering.\nAdd online linear regression demo from JSL.\nUpdate lgssm filtering output and port lgssm demos from JSL.\nFix broadcasting in calculating emission log probs\nRestructure and add to tfp lgssm tests and update tracking demo."
+    "text": "It further serves as a record of the work that I undertook.\n\nssm-jax PRs\n\nFunctional Loopy bp in a Gaussian Factor Graph.\nBelief Propagation on a Gaussian Chain\nKalman info form marginal log likelihood and smoothing\nAdd information form filtering.\nAdd online linear regression demo from JSL.\nUpdate lgssm filtering output and port lgssm demos from JSL.\nFix broadcasting in calculating emission log probs\nRestructure and add to tfp lgssm tests and update tracking demo."
   },
   {
     "objectID": "index.html",
