@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "Since this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "posts/gsoc/index.html",
+    "href": "posts/gsoc/index.html",
+    "title": "Google Summer of Code",
+    "section": "",
+    "text": "It further serves as a record of the work that I undertook.\nIt is still a work in progress…\n\nPRs\n\nLoopy BP in a factor graph\nBelief Propagation on a Gaussian Chain\nKalman info form marginal log likelihood and smoothing\nAdd information form filtering.\nAdd online linear regression demo from JSL.\nUpdate lgssm filtering output and port lgssm demos from JSL.\nFix broadcasting in calculating emission log probs\nRestructure and add to tfp lgssm tests and update tracking demo."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Posts",
+    "section": "",
+    "text": "Sep 12, 2022\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nSep 9, 2022\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I’ve spent the summer of 2022 working as part of the Google Summer of Code program on the ssm-jax library."
+  }
+]
