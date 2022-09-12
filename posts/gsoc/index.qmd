@@ -1,0 +1,24 @@
+---
+title: "Google Summer of Code"
+date: "2022-09-12"
+---
+
+
+This document details some of experiences during the Google Summer of Code. 
+
+It further serves as a record of the work that I undertook.
+
+It is still a work in progress...
+
+
+#### PRs
+
+* [Loopy BP in a factor graph]()
+* [Belief Propagation on a Gaussian Chain](https://github.com/probml/ssm-jax/pull/161)
+* [Kalman info form marginal log likelihood and smoothing](https://github.com/probml/ssm-jax/pull/62)
+* [Add information form filtering.](https://github.com/probml/ssm-jax/pull/30)
+* [Add online linear regression demo from JSL.](https://github.com/probml/ssm-jax/pull/27)
+* [Update lgssm filtering output and port lgssm demos from JSL.](https://github.com/probml/ssm-jax/pull/23)
+* [Fix broadcasting in calculating emission log probs](https://github.com/probml/ssm-jax/pull/22)
+* [Restructure and add to tfp lgssm tests and update tracking demo.](https://github.com/probml/ssm-jax/pull/19)
+

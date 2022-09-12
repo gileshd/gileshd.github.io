@@ -1,0 +1,19 @@
+project:
+  type: website
+
+website:
+  title: "Giles Harper-Donnelly"
+  navbar:
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/gileshd
+      - icon: twitter
+        href: https://twitter.com/gileshd
+format:
+  html:
+    theme: litera
+    css: styles.css
+
+
+
