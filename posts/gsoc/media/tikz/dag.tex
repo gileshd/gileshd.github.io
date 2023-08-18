@@ -1,0 +1,29 @@
+% See SO post for png converstion details - https://tex.stackexchange.com/a/11880
+\documentclass[crop]{standalone}
+\usepackage{tikz}
+
+\begin{document}
+\pagestyle{empty}
+ 
+
+\usetikzlibrary{math}
+\usetikzlibrary{arrows.meta}
+\tikzmath{
+\nodesize=0.5;
+\y=1.5; \x=2;
+}
+\tikzstyle{hidden}=[circle, draw=black, thick, inner sep=0pt, minimum size=\nodesize cm]
+\tikzstyle{observed}=[circle, draw=black, fill=black!30, thick, inner sep=0pt, minimum size=\nodesize cm]
+\tikzstyle{arrow} =[-latex,shorten <= 0.3mm, shorten >= 0.3mm, semithick]
+\begin{tikzpicture}
+	\node[hidden] (Z1) at (0,\y) [label=120:$\mathbf{z}_t$] {};
+	\node[hidden] (Z2) at (\x,\y) [label=120:$\mathbf{z}_{t+1}$] {};
+	\node[observed] (Y1) at (0,0) [label=below:$\mathbf{y}_{t}$] {};
+	\node[observed] (Y2) at (\x,0) [label=below:$\mathbf{y}_{t+1}$]{};
+	\draw [arrow] (Z1) to (Z2);
+	\draw [arrow] (Z1) to (Y1);
+	\draw [arrow] (Z2) to (Y2);
+\end{tikzpicture}
+
+\end{document}
+
