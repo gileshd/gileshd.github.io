@@ -4,6 +4,9 @@ project:
 website:
   title: "Giles Harper-Donnelly"
   navbar:
+    left:
+      - blog.qmd
+      - phd.qmd
     right:
       - about.qmd
       - icon: github

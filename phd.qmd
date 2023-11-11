@@ -1,0 +1,86 @@
+---
+title: "PhD"
+css: style.css
+bibliography: phd-references.bib
+# image: media/phd-title-page.png
+# about:
+#   template: jolla
+  # links:
+  #   - icon: twitter
+  #     text: Twitter
+  #     href: https://twitter.com/gileshd
+  #   - icon: github
+  #     text: Github
+  #     href: https://github.com/gileshd
+
+---
+
+<!-- TODO: Look into how to change the page title -->
+
+[![](media/phd-title-page.png){fig-align="center" width=60%}](https://www.repository.cam.ac.uk/handle/1810/350585){target="blank"}
+
+## Summary 
+
+The incredible complexity of biological systems presents significant obstacles to attempts to understanding of them. My thesis explores some approaches to tackling this complexity with a particular focus on the study of systems in developmental biology.
+
+Developmental systems provide ideal case studies when considering such questions because they exhibit many of the hallmark features of biological complexity. By their very nature these systems are dynamic and their study necessitates consideration of an enormous variety of different processes unfolding at different length scales and levels of organisation.
+<!-- For instance the explanation for a given phenomenon in development might need to take into account factors ranging from the biochemical modification of individual transcription factor molecules, through the complex feedback dynamics of cell-cell signalling networks, to the mechanical properties of a growing population of cells. -->
+
+In order to understand these systems we need to build coherent, general, and interpretable models which are capable of encompassing the multitude of biological processes from which they are constituted.
+Taking inspiration from influential work in computational neuroscience I propose some novel approaches for conceptualising and modelling these processes. Support for the utility of these approaches is provided by a series of case-studies in which they are used to analyse some archetypal developmental systems.
+
+An important theme in this work is the relationship between computational and mechanistic perspectives on a processes. This topic is considered in some detail and analysed concretely in the context of a simple model of cell-cell interactions. Some of the lessons learned from this analysis are used to propose a novel method for parameter inference in dynamical models of gene regulatory networks.
+
+Two select projects from this work are briefly introduced in the sections below.
+ 
+## Marr's Levels in Biology
+
+In the course of his work on the human visual system, the neuroscientist David Marr proposed a framework for the analysis of information processing systems [@Marr1982]. Marr argued that in order to understand something complex like the human brain we need to consider different kinds of explanations situated at different levels of description or analysis.
+Collectively referred to as Marr’s levels of analysis (or levels of understanding), this framework has been hugely influential in neuroscience since its inception in the 1970’s. As Willshaw et al. [-@Willshaw2015] put it,
+
+> “[Marr’s] methodology gave the intellectual infrastructure within which almost all subsequent modelling has been performed.”
+
+In my thesis I argue that Marr’s ideas have the potential to play an instrumental role in our understanding of complex systems in developmental biology.
+
+In order to introduce these ideas, it is helpful to consider a simple example from the domain of visual perception, illustrated in the figure below. This visual illusion, known as a Necker cube, has the property that when looking at it we can ‘see’ two different, incompatible, 3D cubes (you might even be able to consciously swap between them).
+
+![The Necker cube (left) can produce visual percepts of two different three-dimensional cubes (centre and right). Explanation for this phenomenon can be provided at both the *computational level* and the *hardware level*.](media/necker-cube-triptych.png){fig-align="center" width=80%}
+
+As Marr argues, the most natural explanation for this illusion makes reference to the computational challenge faced by the visual system. Namely, that the input at the retina contains two spatial dimensions and the visual system must use this to infer the 3D structure of the world. In the case of the Necker cube, the two-dimensional representation on the page supports two different, equally plausible, 3D shapes. It is this ambiguity which results in the phenomenon of being able to perceive two different cubes.
+
+This type of explanation, which appeals to details of the computational problem that the system is trying to solve, is an example of an explanation at the top level of Marr’s hierarchy, known as the computational level. The subsequent two levels concern the algorithms by which the system solves this computational problem (algorithmic and representational level) and the way in which these algorithms are implemented by the physical hardware of the system (hardware level).
+
+However, Marr’s hierarchy decomposes the *computation* that a system performs. In order to apply these ideas in the study of developmental systems we either need to be able to describe the behaviour of these systems in computational terms or develop a more general language with which to frame Marr’s levels.
+
+To this end, I propose a generalisation of Marr’s framework which replaces the ideas computation and algorithm with the more broadly applicable concepts of function and strategy. Justification for this move is provided with an analysis of the relationship between the different levels in the hierarchy and the relationship of this framework to scientific models considered more generally.
+
+In order to demonstrate the applicability of these ideas in the context of developmental biology, I present two case-studies in which this type of framework is used to analyse a developmental system.
+
+<!-- The first case-study considers a developmental axis patterning, a process for which computational language can be appropriate. The second case-study considers a system which cannot be described in the language of information processing. -->
+
+
+## Integrating Computational and Mechanistic Perspectives in a Simple Model of Cell-Cell Communication
+
+The Commensurability of computational and mechanistic perspectives of a biological process is important if we are to take full advantage of the ideas presented in the previous section.
+Moreover, it is increasingly common to consider the development systems as performing information processing [@Tkacik2021].
+
+<!-- The integration of these different approaches to describing a system is a central step in the application of the framework introduced in the previous section. -->
+
+In order to demonstrate how these different perspectives can be productively combined, I consider a simple model of cell-cell communication. In this model a pair of cells must infer their individual positions based on the local concentration of a signalling molecule.
+By interacting to share information cells are better able to infer their position than if they were to act independently. 
+
+The transfer of information from the joint distribution of gene concentration across the two cells in the two marginal distributions of gene concentration in each individual cell is discussed in the context of *canalization* and the idea of *positional information*.
+
+::: {layout-ncol=2}
+
+![Joint (center) and marginal (outside) distributions of *Delta* concentration in two cells. Over time the interactions between the two cells drive the expression of the genes such that by t=1 (solid lines) there is strong relationship between the local concentration of the genes and the cell identity.](media/delta_delta_contour_t0t1.png){fig-align="center" width=60%}
+
+![The separatrix (dashed line) of the underlying dynamical system can be related to the optimal decision boundary of the inference problem. The behaviour of trajectories close to this boundary is closely related to ability of the cells to successfully infer their position.](media/delta_delta_separation_stochastic.png){fig-align="center" width=60%}
+
+:::
+
+Interactions between the two cells are described by a stochastic differential equation model of the *Delta-Notch* gene regulatory network.
+Performance in the information processing task is related to dynamical properties of the model describing the underlying genetic circuit. 
+
+Furthermore, by introducing a quantitative measure of the informational processing of the performance allows for a novel approach for using a description of the computation problem faced by the cells to facilitate parameter inference in the mechanistic model of the gene regulatory network.
+
