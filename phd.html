@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Giles Harper-Donnelly - About</title>
+<title>Giles Harper-Donnelly - PhD</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,6 +33,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
@@ -79,9 +80,19 @@ ul.task-list li input[type="checkbox"] {
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./blog.html" rel="" target="">
+ <span class="menu-text">Posts</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./phd.html" rel="" target="" aria-current="page">
+ <span class="menu-text">PhD</span></a>
+  </li>  
+</ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="./about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -107,34 +118,89 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-jolla">
-  <img src="profile.jpg" class="about-image
-  round " style="height: 15em; width: 15em;">
- <header id="title-block-header" class="quarto-title-block default">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">PhD</h1>
 </div>
+
+
+
 <div class="quarto-title-meta">
+
+    
+  
+    
   </div>
-</header><main class="content" id="quarto-document-content">
-<p>I’m a PhD Student in the Department of Genetics at the University of Cambridge. Thinking about how to think about how cells think.</p>
-<p>I’ve spent the summer of 2022 working as part of the Google Summer of Code program on the <a href="https://github.com/probml/ssm-jax">ssm-jax</a> library.</p>
+  
+
+</header>
+
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="media/phd-title-page.png" class="img-fluid figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+<p>My thesis is an examination of different conceptual frameworks we can use to try to help us understand complex systems in biology with a focus on developmental systems.</p>
+<p><strong>Biology is hard</strong>. Extraordinary complexity in biological systems.</p>
+<p>In order to construct coherent, general, and interpretable models of complex developmental systems…</p>
+<p>In order to productively model and interact with these systems we need to build models which abstract from all the stuff which is happening in the cell. In order to a build a scientific understanding of these systems we need models which can talk to each other, work together to form a coherent picture of what is going on.</p>
+<!-- MENTION INTERPRETABILITY!!! -->
+
+<!-- ... coherent, general, and interpretable models of developmental systems. -->
+<p>The challenges are only becoming more apparent as new methods producing generating increasingly high-throughput data allow us to move beyond the reductionist approaches which characterised much of the success of 20th century biology and try to build a more system-level understanding of biological phenomena.</p>
+<p>Developmental Biology is a particularly good environment to study these questions because of the variety in the types of biological processes which must be considered when studying a XXX. For instance, the explanation for a given phenomenon in development might need to take into account factors ranging from the biochemical modification of individual transcription factor molecules to the mechanical properties of a growing populations of cells.</p>
+<!-- Footnote: Development is perhaps unique in biological subfields in that it’s topic is studying is a process rather than being defined by some property or length scale, -->
+<p>The questions driving the present work are the practical questions of: <em>“how should we go about constructing simple yet powerful descriptions and explanations of developmental phenomena?”</em> and <em>“how is it that such characterisations can be integrated with our understanding of the properties and activities of the innumerable genetic and biochemical processes occurring in every cell?”</em></p>
+<!-- Maybe here could have something about how it is important to consider the science as much as the system being studied. -->
+<p>Below I briefly introduce two of the main projects which make up my thesis.</p>
+<section id="marrs-levels-in-biology" class="level3">
+<h3 class="anchored" data-anchor-id="marrs-levels-in-biology">Marr’s Levels in Biology</h3>
+<p>In the course of his work on the human visual system, the neuroscientist David Marr proposed a framework of levels for the analysis of information processing systems (Marr, 1982).</p>
+<p>Marr argued that in order to understand something complex like the human brain we need to consider different kinds of explanations situated at different levels of description. <!-- TODO: Fix this sentence --> Specifically, Marr proposed a hierarchy of three levels at which we could situate our explanations of the phenomena exhibited by a system [refs].</p>
+<p>In order to illustrate these ideas, let’s consider a simple example from the domain of visual perception. An example that we can use to demonstrate these ideas is illustrated in the figure below. This visual illusion, known as a Necker cube, has the property that when looking at it we can ‘see’ two different, incompatible, 3D cubes (you might even be able to consciously swap between them).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="media/necker-cube-triptych.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">The Necker cube (left) can produce visual percepts of two different three-dimensional cubes (centre and right), Necker (1832). Explanation for this phenomenon can be provided at both the <em>computational level</em> and the <em>hardware level</em>.</figcaption>
+</figure>
+</div>
+<p>As Marr argues, the most natural explanation for this illusion makes reference to the computational challenge faced by the visual system. Namely, that the input at the retina contains two spatial dimensions and the visual system must use this to infer the 3D structure of the world. In the case of the Necker cube, the two-dimensional representation on the page supports two different, equally plausible, 3D shapes. It is this ambiguity which results in the phenomenon of being able to perceive two different cubes.</p>
+<p>This type of explanation, which appeals to details of the computational problem that the system is trying to solve, is an example of an explanation at the top level of Marr’s hierarchy, known as the <em>computational level</em>.</p>
+<!-- AHHHH I really feel this is going into too much detail... -->
+<p>The subsequent two levels concern the algorithms or strategy by which the system solves this computational problem (<em>algorithmic and representational level</em>) and the way in which these algorithms are implemented by the physical hardware of the system (<em>hardware level</em>).</p>
+<p>Collectively referred to as Marr’s <em>levels of analysis</em> (or <em>levels of understanding</em>), this framework has been hugely influential ingneuroscience since its inception in the 1970’s. As [Willshaw2015] put it,</p>
+<blockquote class="blockquote">
+<p>“[Marr’s] methodology gave the intellectual infrastructure within which almost all subsequent modelling has been performed.”</p>
+</blockquote>
+<p>One of the principle projects in my thesis is to argue that such a framework has the potential to play an instrumental role in our attempts to understand complex systems in developmental biology.</p>
+<p>But Marr’s levels are about computation - in order to demonstrate how they can help us understand developmental system we need to either describe developmental systems using computational language or develop a more general language with which to discuss Marr’s levels.</p>
+</section>
+<section id="mechanistic-and-information-theoretic-models-of-the-delta-notch-signalling-pathway" class="level3">
+<h3 class="anchored" data-anchor-id="mechanistic-and-information-theoretic-models-of-the-delta-notch-signalling-pathway">Mechanistic and Information Theoretic Models of the Delta-Notch Signalling Pathway</h3>
+<!-- TODO: Resize -->
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="media/delta_delta_contour_t0t1.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption class="figure-caption">The joint and marginal distribution of the concentration of the <em>Delta</em> gene in two interacting cells.</figcaption>
+</figure>
+</div>
+<!-- This needs to get fixed: -->
+<!-- The plot displays the joint (centre) and marginal (outside) distributions of the concentration of the Delta gene in two cells A and B. The initial concentration of Delta in each cell depends on their positions, z. There are two possibilities for the localisation of the cells, shown in orange and blue. At t=0 (dashed lines) it is hard to confidently infer the index of cell (orange / blue) given the marginal distributions of the Delta gene concentrations (outside plots). However over time the interactions between the two cells drive the expression of the genes such that by t=1 (solid lines) there is strong relationship between the local concentration of the genes and the cell identity. -->
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="media/delta_delta_separation_stochastic.png" class="img-fluid figure-img" style="width:60.0%"></p>
+</figure>
+</div>
 
 
-</main> 
-  <hr class="about-sep">
-   <div class="about-links">
-  <a href="https://twitter.com/gileshd" class="about-link" rel="" target="">
-    <i class="bi bi-twitter"></i>
-     <span class="about-link-text">Twitter</span>
-  </a>
-  <a href="https://github.com/gileshd" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">Github</span>
-  </a>
-</div>
-</div>
- <!-- /main -->
+</section>
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -155,6 +221,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     

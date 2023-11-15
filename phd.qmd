@@ -1,0 +1,26 @@
+---
+title: "PhD"
+# image: media/phd-title-page.png
+# about:
+#   template: jolla
+  # links:
+  #   - icon: twitter
+  #     text: Twitter
+  #     href: https://twitter.com/gileshd
+  #   - icon: github
+  #     text: Github
+  #     href: https://github.com/gileshd
+
+---
+
+![](media/phd-title-page.png)
+
+I was a PhD Student. I did a PhD. This is what it was about.
+
+### Marr's Levels in Biology
+
+
+### Mechanistic and Information Theoretic Models of the Delta-Notch Signalling Pathway
+
+<!-- TODO: Resize -->
+![](media/delta_delta_contour_t0t1.png)
