@@ -1,7 +1,7 @@
 ---
 title: "Google Summer of Code 2022"
 date: "2022-09-12"
-description: "A summary of my *Google Summer of Code* experience."
+description: "An account of my *Google Summer of Code* experience."
 image: "./media/pml2-cover.jpeg"
 format:
   html:
@@ -61,8 +61,7 @@ My first contribution to the book was actually made during the GSOC selection pr
 ![Samples from a Restricted Boltzmann Machine trained with constrastive divergence on MNIST](./media/rbm_mnist_samples.png)
 
 After the start of the GSOC process my contributions to the book focussed more on the topic of state-space models. 
-<!-- TODO: Slightly improve this sentence? -->
-For context, let's now quickly cover some very brief background.
+To provide some context for the rest of this post it will be helpful to quickly cover some background.
 
 ### State-Space Models
 
@@ -132,7 +131,7 @@ One of the principal code projects I worked on during the summer was to develop 
 
 The project fit well with the topics I was working on in the book, presented some interesting implementation challenges, and taught me some valuable lessons.
 <!-- TODO: Fix this sentence? -->
-In order to explain why it will be helpful to quickly cover some background.
+In order to explain why, it will be helpful to quickly cover some background.
 
 ### Gaussian Belief Propagation 
 
@@ -170,6 +169,9 @@ The code used in this example can be found [here](https://github.com/probml/pgm-
 
 Coming from a biological background, there is something reassuringly *messy* about loopy belief propagation as a distributed approach to solving a problem.  None of this fancy scheduling business, just let the messages fly and see what happens. 
 
+TODO: Fix this - "it is not possible to have a central coordinator..."
+When things in biology perform these types of distributed operations there is no space for a central coordinator
+
 Furthermore, the idea of tackling a [big distributed problem](https://en.wikipedia.org/wiki/Drosophila_embryogenesis#Anterior-posterior_axis_patterning_in_Drosophila) by solving a bunch of more straightforward local problems and [communicating](https://en.wikipedia.org/wiki/Cell_signaling) the results is reminiscent of some of the biological phenomena I studied during my PhD. 
 
 
@@ -183,7 +185,7 @@ By implementing Gaussian belief propagation in JAX we can take advantages of all
 
 This was a rather different style of development to what I was used to from my PhD.
 Writing code that is intended to exist as a stand-alone implementation for others to use feels rather different to writing code that is only meant to be used as part of a particular analysis.
-The project also presented raised a variety of design challenges.
+The project also presented a variety of design challenges.
 These ranged from interesting problems such as how to reconcile the object-oriented nature of message passing[^Smalltalk-OO-MP] with the functional programming style of JAX to more mundane issues such as figuring out the most efficient way to extract particular blocks from a precision matrix.^[Which in retrospect was a clear instance of premature optimisation.]
 
 [^Smalltalk-OO-MP]:
