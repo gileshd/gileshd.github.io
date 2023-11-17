@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2022-09-12">
-<meta name="description" content="A summary of my Google Summer of Code experience.">
+<meta name="description" content="An account of my Google Summer of Code experience.">
 
 <title>Giles Harper-Donnelly - Google Summer of Code 2022</title>
 <style>
@@ -113,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
       <h1 class="title">Google Summer of Code 2022</h1>
                   <div>
         <div class="description">
-          A summary of my <em>Google Summer of Code</em> experience.
+          An account of my <em>Google Summer of Code</em> experience.
         </div>
       </div>
                 </div>
@@ -144,12 +144,6 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<!-- TODO: -->
-<!-- - Check consistency of hyphenation with e.g. information-form. -->
-<!-- - Sort out font in lists -->
-<!-- - Update 1D loopy bp notebook link. -->
-<!-- - JAX should be uppercase -->
-<!-- - BP is just the sum-product algorithm!! -->
 <!-- ![](https://upload.wikimedia.org/wikipedia/commons/7/7c/Google_Summer_of_Code_sun_logo_2022.svg){width=200px fig-align="center"} -->
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -188,7 +182,7 @@ ul.task-list li input[type="checkbox"] {
 <figcaption class="figure-caption">Samples from a Restricted Boltzmann Machine trained with constrastive divergence on MNIST</figcaption>
 </figure>
 </div>
-<p>After the start of the GSOC process my contributions to the book focussed more on the topic of state-space models. <!-- TODO: Slightly improve this sentence? --> For context, let’s now quickly cover some very brief background.</p>
+<p>After the start of the GSOC process my contributions to the book focussed more on the topic of state-space models. To provide some context for the rest of this post it will be helpful to quickly cover some background.</p>
 <section id="state-space-models" class="level3">
 <h3 class="anchored" data-anchor-id="state-space-models">State-Space Models</h3>
 <p>A state-space model is characterised by a hidden state, <span class="math inline">\(\mathbf{z}_t\)</span>, which evolves over time according to a Markov process. At each time step<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> observations, <span class="math inline">\(\mathbf{y}_t\)</span>, are generated conditional on the current value of the hidden state. This process can be represented graphically as follows:</p>
@@ -237,7 +231,7 @@ ul.task-list li input[type="checkbox"] {
 <figcaption class="figure-caption">Loopy Gaussian belief propagation in 1D</figcaption>
 </figure>
 </div>
-<p>The project fit well with the topics I was working on in the book, presented some interesting implementation challenges, and taught me some valuable lessons. <!-- TODO: Fix this sentence? --> In order to explain why it will be helpful to quickly cover some background.</p>
+<p>The project fit well with the topics I was working on in the book, presented some interesting implementation challenges, and taught me some valuable lessons. <!-- TODO: Fix this sentence? --> In order to explain why, it will be helpful to quickly cover some background.</p>
 <section id="gaussian-belief-propagation" class="level3">
 <h3 class="anchored" data-anchor-id="gaussian-belief-propagation">Gaussian Belief Propagation</h3>
 <!-- #### Messaging passing algorithms -->
@@ -250,13 +244,14 @@ ul.task-list li input[type="checkbox"] {
 <p>For certain graph structures<a href="#fn13" class="footnote-ref" id="fnref13" role="doc-noteref"><sup>13</sup></a> there exist message passing algorithms to calculate <em>exact</em> solutions. These exact algorithms carefully control the flow of messages in the graph to ensure that evidence is appropriately propagated between nodes. In other scenarios, perhaps because it is not possible given the graph structure<a href="#fn14" class="footnote-ref" id="fnref14" role="doc-noteref"><sup>14</sup></a>, or simply because the message passing schedule does not enforce it, evidence is allowed to circulate in a more haphazard fashion, messages travel in loops, and evidence may be double counted. In such cases, message passing provides an <em>approximate</em> solution and these algorithms are known as <em>loopy belief propagation</em>. The basic idea is to run belief propagation with loops, cross your fingers and hope that it will converge to a decent estimate. It often does.<a href="#fn15" class="footnote-ref" id="fnref15" role="doc-noteref"><sup>15</sup></a></p>
 <p>The figure at the top of this section shows the progress of a loopy belief propagation algorithm for a simple 1D inference problem in which the value of an unknown function is inferred from measurements and a smoothness constraint. The code used in this example can be found <a href="https://github.com/probml/pgm-jax/blob/main/gaussian-loopy-bp/gauss-bp-1d-line.ipynb">here</a>.</p>
 <p>Coming from a biological background, there is something reassuringly <em>messy</em> about loopy belief propagation as a distributed approach to solving a problem. None of this fancy scheduling business, just let the messages fly and see what happens.</p>
+<p>When things in biology perform these types of distributed operations there is often no possibility of a central supervisor, all coordination between the different entities, different cells for instance, must be encoded in the interactions between them.</p>
 <p>Furthermore, the idea of tackling a <a href="https://en.wikipedia.org/wiki/Drosophila_embryogenesis#Anterior-posterior_axis_patterning_in_Drosophila">big distributed problem</a> by solving a bunch of more straightforward local problems and <a href="https://en.wikipedia.org/wiki/Cell_signaling">communicating</a> the results is reminiscent of some of the biological phenomena I studied during my PhD.</p>
 </section>
 <section id="jax-implementation" class="level3">
 <h3 class="anchored" data-anchor-id="jax-implementation">JAX Implementation</h3>
 <p><a href="https://jax.readthedocs.io/en/latest/index.html">JAX</a> is a Python library for machine learning and scientific computing which combines autograd and <a href="https://www.tensorflow.org/xla">XLA</a>. You get automatic calculation of gradients (of any order), jit compilation, auto-vectorisation as well as native support for different hardware accelerators (GPUs and TPUs) all while writing code with a familiar numpy-style interface. There is an increasingly rich ecosystem of libraries for all sorts of specialised tasks.<a href="#fn16" class="footnote-ref" id="fnref16" role="doc-noteref"><sup>16</sup></a></p>
 <p>By implementing Gaussian belief propagation in JAX we can take advantages of all of the helpful features described above and also open up the possibility of using it as a subroutine in other JAX code.</p>
-<p>This was a rather different style of development to what I was used to from my PhD. Writing code that is intended to exist as a stand-alone implementation for others to use feels rather different to writing code that is only meant to be used as part of a particular analysis. The project also presented raised a variety of design challenges. These ranged from interesting problems such as how to reconcile the object-oriented nature of message passing<a href="#fn17" class="footnote-ref" id="fnref17" role="doc-noteref"><sup>17</sup></a> with the functional programming style of JAX to more mundane issues such as figuring out the most efficient way to extract particular blocks from a precision matrix.<a href="#fn18" class="footnote-ref" id="fnref18" role="doc-noteref"><sup>18</sup></a></p>
+<p>This was a rather different style of development to what I was used to from my PhD. Writing code that is intended to exist as a stand-alone implementation for others to use feels rather different to writing code that is only meant to be used as part of a particular analysis. The project also presented a variety of design challenges. These ranged from interesting problems such as how to reconcile the object-oriented nature of message passing<a href="#fn17" class="footnote-ref" id="fnref17" role="doc-noteref"><sup>17</sup></a> with the functional programming style of JAX to more mundane issues such as figuring out the most efficient way to extract particular blocks from a precision matrix.<a href="#fn18" class="footnote-ref" id="fnref18" role="doc-noteref"><sup>18</sup></a></p>
 <p>I learned a lot during the process about managing this type of development project but learning these lessons took time and ultimately I think it is fair to say that the final product fell a bit short of the initial (rather ambitious) goals. Having said this, I think there are a bunch of positives to have come out of this part of the project. I got great exposure to some of the more internal bits of JAX and fell in love with pytrees.</p>
 <p>As it stands at the end of the summer, the implementation contains loopy belief propagation for general graphs and directed belief propagation on chain structured graphs and will serve as a great foundation for future development which I am keen to continue.<a href="#fn19" class="footnote-ref" id="fnref19" role="doc-noteref"><sup>19</sup></a></p>
 </section>
