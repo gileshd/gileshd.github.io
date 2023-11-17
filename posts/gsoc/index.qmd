@@ -162,7 +162,7 @@ The code used in this example can be found [here](https://github.com/probml/pgm-
 
 Coming from a biological background, there is something reassuringly *messy* about loopy belief propagation as a distributed approach to solving a problem.  None of this fancy scheduling business, just let the messages fly and see what happens. 
 
-When things in biology perform these types of distributed operations there is often no possibility of a central supervisor, all coordination between the different entities, different cells for instance, must be encoded in the interactions between them.
+When systems in biology perform these types of distributed operations there is often no possibility of a central supervisor, all coordination between the different entities, different cells for instance, must be encoded in the interactions between them.
 
 Furthermore, the idea of tackling a [big distributed problem](https://en.wikipedia.org/wiki/Drosophila_embryogenesis#Anterior-posterior_axis_patterning_in_Drosophila) by solving a bunch of more straightforward local problems and [communicating](https://en.wikipedia.org/wiki/Cell_signaling) the results is reminiscent of some of the biological phenomena I studied during my PhD. 
 
