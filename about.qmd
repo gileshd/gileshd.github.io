@@ -13,6 +13,8 @@ about:
 
 ---
 
-I'm a PhD Student in the Department of Genetics at the University of Cambridge. Thinking about how to think about how cells think.
+ML Scientist living in Taipei. 
 
-I've spent the summer of 2022 working as part of the Google Summer of Code program on the [ssm-jax](https://github.com/probml/ssm-jax) library.
+Previously, PhD student in the Department of Genetics at the University of Cambridge. Thinking about how to think about how cells think.
+
+I spent the [summer of 2022](/posts/gsoc) working as part of the Google Summer of Code program on [dynamax](https://github.com/probml/dynamax) a library for state-space models in JAX. 
