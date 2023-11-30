@@ -1,7 +1,20 @@
 ---
-title: "Home"
-title-block-banner: true
+title: "About"
+image: media/profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/gileshd
+    - icon: github
+      text: Github
+      href: https://github.com/gileshd
+
 ---
 
-Test landing page.
+ML Scientist living in Taipei. 
 
+Previously, PhD student in the Department of Genetics at the University of Cambridge. Thinking about how to think about how cells think.
+
+I spent the [summer of 2022](/posts/gsoc) working as part of the Google Summer of Code program on [dynamax](https://github.com/probml/dynamax) a library for state-space models in JAX. 
