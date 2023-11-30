@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Giles Harper-Donnelly - About</title>
+<title>Giles Harper-Donnelly - PhD</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -33,6 +52,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
@@ -61,6 +81,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -85,13 +106,13 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Posts</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./phd.html" rel="" target="">
+    <a class="nav-link active" href="./phd.html" rel="" target="" aria-current="page">
  <span class="menu-text">PhD</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="./index.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -117,35 +138,104 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-jolla">
-  <img src="media/profile.jpg" class="about-image
-  round " style="height: 15em; width: 15em;">
- <header id="title-block-header" class="quarto-title-block default">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">PhD</h1>
 </div>
+
+
+
 <div class="quarto-title-meta">
+
+    
+  
+    
   </div>
-</header><main class="content" id="quarto-document-content">
-<p>ML Scientist living in Taipei.</p>
-<p>Previously, PhD student in the Department of Genetics at the University of Cambridge. Thinking about how to think about how cells think.</p>
-<p>I spent the <a href="./posts/gsoc">summer of 2022</a> working as part of the Google Summer of Code program on <a href="https://github.com/probml/dynamax">dynamax</a> a library for state-space models in JAX.</p>
+  
 
+</header>
 
-</main> 
-  <hr class="about-sep">
-   <div class="about-links">
-  <a href="https://twitter.com/gileshd" class="about-link" rel="" target="">
-    <i class="bi bi-twitter"></i>
-     <span class="about-link-text">Twitter</span>
-  </a>
-  <a href="https://github.com/gileshd" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">Github</span>
-  </a>
+<!-- TODO: Look into how to change the page title -->
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://www.repository.cam.ac.uk/handle/1810/350585" target="blank"><img src="media/phd-title-page.png" class="img-fluid figure-img" style="width:60.0%"></a></p>
+</figure>
+</div>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>The incredible complexity of biological systems presents significant obstacles to attempts to understanding of them. My thesis explores some approaches to tackling this complexity with a particular focus on the study of systems in developmental biology.</p>
+<p>Developmental systems provide ideal case studies when considering such questions because they exhibit many of the hallmark features of biological complexity. By their very nature these systems are dynamic and their study necessitates consideration of an enormous variety of different processes unfolding at different length scales and levels of organisation. <!-- For instance the explanation for a given phenomenon in development might need to take into account factors ranging from the biochemical modification of individual transcription factor molecules, through the complex feedback dynamics of cell-cell signalling networks, to the mechanical properties of a growing population of cells. --></p>
+<p>In order to understand these systems we need to build coherent, general, and interpretable models which are capable of encompassing the multitude of biological processes from which they are constituted. Taking inspiration from influential work in computational neuroscience I propose some novel approaches for conceptualising and modelling these processes. Support for the utility of these approaches is provided by a series of case-studies in which they are used to analyse some archetypal developmental systems.</p>
+<p>An important theme in this work is the relationship between computational and mechanistic perspectives on a processes. This topic is considered in some detail and analysed concretely in the context of a simple model of cell-cell interactions. Some of the lessons learned from this analysis are used to propose a novel method for parameter inference in dynamical models of gene regulatory networks.</p>
+<p>Two select projects from this work are briefly introduced in the sections below.</p>
+</section>
+<section id="marrs-levels-in-biology" class="level2">
+<h2 class="anchored" data-anchor-id="marrs-levels-in-biology">Marr’s Levels in Biology</h2>
+<p>In the course of his work on the human visual system, the neuroscientist David Marr proposed a framework for the analysis of information processing systems <span class="citation" data-cites="Marr1982">(<a href="#ref-Marr1982" role="doc-biblioref">Marr 1982</a>)</span>. Marr argued that in order to understand something complex like the human brain we need to consider different kinds of explanations situated at different levels of description or analysis. Collectively referred to as Marr’s levels of analysis (or levels of understanding), this framework has been hugely influential in neuroscience since its inception in the 1970’s. As Willshaw et al. <span class="citation" data-cites="Willshaw2015">(<a href="#ref-Willshaw2015" role="doc-biblioref">2015</a>)</span> put it,</p>
+<blockquote class="blockquote">
+<p>“[Marr’s] methodology gave the intellectual infrastructure within which almost all subsequent modelling has been performed.”</p>
+</blockquote>
+<p>In my thesis I argue that Marr’s ideas have the potential to play an instrumental role in our understanding of complex systems in developmental biology.</p>
+<p>In order to introduce these ideas, it is helpful to consider a simple example from the domain of visual perception, illustrated in the figure below. This visual illusion, known as a Necker cube, has the property that when looking at it we can ‘see’ two different, incompatible, 3D cubes (you might even be able to consciously swap between them).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="media/necker-cube-triptych.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">The Necker cube (left) can produce visual percepts of two different three-dimensional cubes (centre and right). Explanation for this phenomenon can be provided at both the <em>computational level</em> and the <em>hardware level</em>.</figcaption>
+</figure>
+</div>
+<p>As Marr argues, the most natural explanation for this illusion makes reference to the computational challenge faced by the visual system. Namely, that the input at the retina contains two spatial dimensions and the visual system must use this to infer the 3D structure of the world. In the case of the Necker cube, the two-dimensional representation on the page supports two different, equally plausible, 3D shapes. It is this ambiguity which results in the phenomenon of being able to perceive two different cubes.</p>
+<p>This type of explanation, which appeals to details of the computational problem that the system is trying to solve, is an example of an explanation at the top level of Marr’s hierarchy, known as the computational level. The subsequent two levels concern the algorithms by which the system solves this computational problem (algorithmic and representational level) and the way in which these algorithms are implemented by the physical hardware of the system (hardware level).</p>
+<p>However, Marr’s hierarchy decomposes the <em>computation</em> that a system performs. In order to apply these ideas in the study of developmental systems we either need to be able to describe the behaviour of these systems in computational terms or develop a more general language with which to frame Marr’s levels.</p>
+<p>To this end, I propose a generalisation of Marr’s framework which replaces the ideas computation and algorithm with the more broadly applicable concepts of function and strategy. Justification for this move is provided with an analysis of the relationship between the different levels in the hierarchy and the relationship of this framework to scientific models considered more generally.</p>
+<p>In order to demonstrate the applicability of these ideas in the context of developmental biology, I present two case-studies in which this type of framework is used to analyse a developmental system.</p>
+<!-- The first case-study considers a developmental axis patterning, a process for which computational language can be appropriate. The second case-study considers a system which cannot be described in the language of information processing. -->
+</section>
+<section id="integrating-computational-and-mechanistic-perspectives-in-a-simple-model-of-cell-cell-communication" class="level2">
+<h2 class="anchored" data-anchor-id="integrating-computational-and-mechanistic-perspectives-in-a-simple-model-of-cell-cell-communication">Integrating Computational and Mechanistic Perspectives in a Simple Model of Cell-Cell Communication</h2>
+<p>The Commensurability of computational and mechanistic perspectives of a biological process is important if we are to take full advantage of the ideas presented in the previous section. Moreover, it is increasingly common to consider the development systems as performing information processing <span class="citation" data-cites="Tkacik2021">(<a href="#ref-Tkacik2021" role="doc-biblioref">Tkačik and Gregor 2021</a>)</span>.</p>
+<!-- The integration of these different approaches to describing a system is a central step in the application of the framework introduced in the previous section. -->
+<p>In order to demonstrate how these different perspectives can be productively combined, I consider a simple model of cell-cell communication. In this model a pair of cells must infer their individual positions based on the local concentration of a signalling molecule. By interacting to share information cells are better able to infer their position than if they were to act independently.</p>
+<p>The transfer of information from the joint distribution of gene concentration across the two cells in the two marginal distributions of gene concentration in each individual cell is discussed in the context of <em>canalization</em> and the idea of <em>positional information</em>.</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="media/delta_delta_contour_t0t1.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Joint (center) and marginal (outside) distributions of <em>Delta</em> concentration in two cells. Over time the interactions between the two cells drive the expression of the genes such that by t=1 (solid lines) there is strong relationship between the local concentration of the genes and the cell identity.</figcaption>
+</figure>
 </div>
 </div>
- <!-- /main -->
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="media/delta_delta_separation_stochastic.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">The separatrix (dashed line) of the underlying dynamical system can be related to the optimal decision boundary of the inference problem. The behaviour of trajectories close to this boundary is closely related to ability of the cells to successfully infer their position.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>Interactions between the two cells are described by a stochastic differential equation model of the <em>Delta-Notch</em> gene regulatory network. Performance in the information processing task is related to dynamical properties of the model describing the underlying genetic circuit.</p>
+<p>Furthermore, by introducing a quantitative measure of the informational processing of the performance allows for a novel approach for using a description of the computation problem faced by the cells to facilitate parameter inference in the mechanistic model of the gene regulatory network.</p>
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-Marr1982" class="csl-entry" role="listitem">
+Marr, David. 1982. <em>Vision: <span>A Computational Investigation</span> into the <span>Human Representation</span> and <span>Processing</span> of <span>Visual Information</span></em>. <span>WH Freeman</span>.
+</div>
+<div id="ref-Tkacik2021" class="csl-entry" role="listitem">
+Tkačik, Gašper, and Thomas Gregor. 2021. <span>“The Many Bits of Positional Information.”</span> <em>Development</em> 148 (2): dev176065. <a href="https://doi.org/10.1242/dev.176065">https://doi.org/10.1242/dev.176065</a>.
+</div>
+<div id="ref-Willshaw2015" class="csl-entry" role="listitem">
+Willshaw, D. J., P. Dayan, and R. G. M. Morris. 2015. <span>“Memory, Modelling and <span>Marr</span>: A Commentary on <span>Marr</span> (1971) <span>‘<span>Simple</span> Memory: A Theory of Archicortex’</span>.”</span> <em>Philosophical Transactions of the Royal Society B: Biological Sciences</em> 370 (1666): 20140383. <a href="https://doi.org/10.1098/rstb.2014.0383">https://doi.org/10.1098/rstb.2014.0383</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -166,6 +256,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
