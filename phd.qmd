@@ -21,7 +21,7 @@ bibliography: phd-references.bib
 
 ## Summary 
 
-The incredible complexity of biological systems presents significant obstacles to attempts to understanding of them. My thesis explores some approaches to tackling this complexity with a particular focus on the study of systems in developmental biology.
+The incredible complexity of biological systems presents significant obstacles to our attempts at understanding of them. My thesis explores some approaches to tackling this complexity with a particular focus on the study of systems in developmental biology.
 
 Developmental systems provide ideal case studies when considering such questions because they exhibit many of the hallmark features of biological complexity. By their very nature these systems are dynamic and their study necessitates consideration of an enormous variety of different processes unfolding at different length scales and levels of organisation.
 <!-- For instance the explanation for a given phenomenon in development might need to take into account factors ranging from the biochemical modification of individual transcription factor molecules, through the complex feedback dynamics of cell-cell signalling networks, to the mechanical properties of a growing population of cells. -->
@@ -29,7 +29,7 @@ Developmental systems provide ideal case studies when considering such questions
 In order to understand these systems we need to build coherent, general, and interpretable models which are capable of encompassing the multitude of biological processes from which they are constituted.
 Taking inspiration from influential work in computational neuroscience I propose some novel approaches for conceptualising and modelling these processes. Support for the utility of these approaches is provided by a series of case-studies in which they are used to analyse some archetypal developmental systems.
 
-An important theme in this work is the relationship between computational and mechanistic perspectives on a processes. This topic is considered in some detail and analysed concretely in the context of a simple model of cell-cell interactions. Some of the lessons learned from this analysis are used to propose a novel method for parameter inference in dynamical models of gene regulatory networks.
+An important theme in this work is the relationship between computational and mechanistic perspectives of a processes. This topic is considered in some detail and analysed concretely in the context of a simple model of cell-cell interactions. Some of the lessons learned from this analysis are used to propose a novel method for parameter inference in dynamical models of gene regulatory networks.
 
 Two select projects from this work are briefly introduced in the sections below.
  
@@ -51,8 +51,7 @@ As Marr argues, the most natural explanation for this illusion makes reference t
 This type of explanation, which appeals to details of the computational problem that the system is trying to solve, is an example of an explanation at the top level of Marr’s hierarchy, known as the computational level. The subsequent two levels concern the algorithms by which the system solves this computational problem (algorithmic and representational level) and the way in which these algorithms are implemented by the physical hardware of the system (hardware level).
 
 However, Marr’s hierarchy decomposes the *computation* that a system performs. In order to apply these ideas in the study of developmental systems we either need to be able to describe the behaviour of these systems in computational terms or develop a more general language with which to frame Marr’s levels.
-
-To this end, I propose a generalisation of Marr’s framework which replaces the ideas computation and algorithm with the more broadly applicable concepts of function and strategy. Justification for this move is provided with an analysis of the relationship between the different levels in the hierarchy and the relationship of this framework to scientific models considered more generally.
+To this end, I propose a generalisation of Marr’s framework which replaces the ideas computation and algorithm with the more broadly applicable concepts of function and strategy. Justification for this move is provided by an analysis of the relationship between the different levels in the hierarchy and the relationship of this framework to scientific models considered more generally.
 
 In order to demonstrate the applicability of these ideas in the context of developmental biology, I present two case-studies in which this type of framework is used to analyse a developmental system.
 
@@ -61,15 +60,15 @@ In order to demonstrate the applicability of these ideas in the context of devel
 
 ## Integrating Computational and Mechanistic Perspectives in a Simple Model of Cell-Cell Communication
 
-The Commensurability of computational and mechanistic perspectives of a biological process is important if we are to take full advantage of the ideas presented in the previous section.
-Moreover, it is increasingly common to consider the development systems as performing information processing [@Tkacik2021].
+The commensurability of computational and mechanistic perspectives of a biological process is important if we are to take full advantage of the ideas presented in the previous section.
+Moreover, it is increasingly common to consider the development systems as performing information processing [@Tkacik2021] and so it is important to be able to integrate this work with approaches which consider the mechanistic details of the underlying biological processes.
 
 <!-- The integration of these different approaches to describing a system is a central step in the application of the framework introduced in the previous section. -->
 
 In order to demonstrate how these different perspectives can be productively combined, I consider a simple model of cell-cell communication. In this model a pair of cells must infer their individual positions based on the local concentration of a signalling molecule.
 By interacting to share information cells are better able to infer their position than if they were to act independently. 
 
-The transfer of information from the joint distribution of gene concentration across the two cells in the two marginal distributions of gene concentration in each individual cell is discussed in the context of *canalization* and the idea of *positional information*.
+The transfer of information from the joint distribution of gene concentration across the two cells into the two marginal distributions of gene concentration in each individual cell is used to shed some light on the ideas of *canalization* and *positional information*.
 
 ::: {layout-ncol=2}
 
