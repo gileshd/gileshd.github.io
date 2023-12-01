@@ -15,6 +15,6 @@ about:
 
 ML Scientist living in Taipei. 
 
-Previously, PhD student in the Department of Genetics at the University of Cambridge. Thinking about how to think about how cells think.
+Previously, [PhD](/phd) student in the Department of Genetics at the University of Cambridge. Thinking about how to think about how cells think.
 
 I spent the [summer of 2022](/posts/gsoc) working as part of the Google Summer of Code program on [dynamax](https://github.com/probml/dynamax) a library for state-space models in JAX. 
